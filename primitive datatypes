@@ -1,0 +1,20 @@
+public class primitiveDatatype
+{
+    public static void main(String[] args)
+    {
+       Integer i = new Integer(10);
+       String g = i.toString();
+       String s = "10";
+        {
+            System.out.println(s + g);
+        }
+        if(s.equals(g))
+        {
+            System.out.println("Both equal");
+        }
+        else
+        {
+            System.out.println("Not equal");
+        }
+    }
+}
