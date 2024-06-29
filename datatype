@@ -1,0 +1,44 @@
+public class primitive
+{
+    public static void main(String[] args)
+    {
+
+        byte byteValue = 100;
+        short shortValue = byteValue;
+        int intValue = shortValue;
+        long longValue = intValue;
+        float floatValue = longValue;
+        double doubleValue = floatValue;
+
+        System.out.println("Implicit Conversion (Widening):");
+        System.out.println("byte to short: " + shortValue);
+        System.out.println("short to int: " + intValue);
+        System.out.println("int to long: " + longValue);
+        System.out.println("long to float: " + floatValue);
+        System.out.println("float to double: " + doubleValue);
+        
+        double largeDoubleValue = 100000.5678;
+        float narrowFloatValue = (float) largeDoubleValue;
+        long narrowLongValue = (long) narrowFloatValue;
+        int narrowIntValue = (int) narrowLongValue;
+        short narrowShortValue = (short) narrowIntValue;
+        byte narrowByteValue = (byte) narrowShortValue;
+
+        System.out.println("\nExplicit Conversion (Narrowing):");
+        System.out.println("double to float: " + narrowFloatValue);
+        System.out.println("float to long: " + narrowLongValue);
+        System.out.println("long to int: " + narrowIntValue);
+        System.out.println("int to short: " + narrowShortValue);
+        System.out.println("short to byte: " + narrowByteValue);
+
+        char charValue = 'A';
+        int charToIntValue = charValue;
+        System.out.println("\nCharacter to Integer Conversion:");
+        System.out.println("char to int: " + charToIntValue);
+
+
+        boolean booleanValue = true;
+        System.out.println("\nBoolean Data Type:");
+        System.out.println("boolean value: " + booleanValue);
+    }
+}
