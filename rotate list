@@ -1,0 +1,33 @@
+import java.util.*;
+public class rotateList {
+    public static void main(String[] args)
+    {
+        List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
+        int k = 3;
+
+        System.out.println("Original List: " + list);
+
+        List<Integer> rotatedList = rotateRight(list, k);
+
+        System.out.println("Rotated List: " + rotatedList);
+    }
+
+    public static <T> List<T> rotateRight(List<T> list, int k)
+    {
+        int n = list.size();
+
+        if (n == 0 || k % n == 0) {
+            return new ArrayList<>(list);
+        }
+
+        k = k % n;
+
+        List<T> part1 = list.subList(n - k, n);
+        List<T> part2 = list.subList(0, n - k);
+
+        List<T> rotatedList = new ArrayList<>(part1);
+        rotatedList.addAll(part2);
+
+        return rotatedList;
+    }
+}
