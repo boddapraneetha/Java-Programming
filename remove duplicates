@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class removeDuplicates {
+    public static void main(String[] args)
+    {
+
+        List<String> listWithDuplicates = new ArrayList<>(Arrays.asList("shiny", "honey", "blessy", "neha", "blessy"));
+
+        System.out.println("Original List: " + listWithDuplicates);
+
+        List<String> listWithoutDuplicates = removeDuplicates(listWithDuplicates);
+
+        System.out.println("List Without Duplicates: " + listWithoutDuplicates);
+    }
+
+    public static <T> List<T> removeDuplicates(List<T> list) {
+
+        Set<T> set = new LinkedHashSet<>(list);
+
+        return new ArrayList<>(set);
+    }
+}
