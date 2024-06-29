@@ -1,0 +1,22 @@
+class sample extends Thread
+{
+    public void run()
+    {
+        try
+        {
+            int i = 0;
+            while (i < 5) {
+                Thread.sleep(5000);
+                System.out.println(i++);
+            }
+        } catch (Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+    public static void main(String Or[])
+    {
+        sample S=new sample();
+        S.start();
+    }
+}
