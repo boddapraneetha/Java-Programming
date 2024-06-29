@@ -1,0 +1,20 @@
+import java.util.*;
+public class Samplecell
+{
+    public static void main(String arr[])
+    {
+        try
+        {
+            List l = new LinkedList();
+            l.add(1);
+            l.add(2);
+            l.add(3);
+            l.remove(2);
+            System.out.println(1);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+}
