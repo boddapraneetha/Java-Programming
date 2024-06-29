@@ -1,0 +1,56 @@
+interface Tree {
+    void fruits(String shape,String taste);
+    void leaves(String size, boolean fresh, boolean consuption);
+    void flowers(String smell, String color, int petals, String season);
+}
+
+
+class Branch1 implements Tree {
+
+    public void fruits(String shape,String taste) {
+        System.out.println("Branch1 fruits: " + shape+ ", " + taste);
+    }
+
+
+    public  void leaves(String size, boolean fresh, boolean consuption) {
+        System.out.println("Branch1 leaves: " + size+ ", " + fresh+ ", " + consuption);
+    }
+
+
+    public void flowers(String smell, String color, int petals, String season) {
+        System.out.println("Branch1 flowers: " + smell + ", " + color + ", " + petals + ", " + season);
+    }
+}
+
+
+class Branch2 implements Tree {
+
+    public  void fruits(String shape,String taste) {
+        System.out.println("Branch2 fruits: " + shape+ ", " + taste);
+    }
+
+
+    public void leaves(String size, boolean fresh, boolean consuption){
+        System.out.println("Branch2 leaves: " + size+ ", " + fresh+ ", " + consuption);
+    }
+
+
+    public void  flowers(String smell, String color, int petals, String season) {
+        System.out.println("Branch2 flowers: " + smell + ", " + color + ", " + petals + ", " + season);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Branch1 branch1 = new Branch1();
+        Branch2 branch2 = new Branch2();
+        branch1.fruits("round", "sweeet");
+        branch1.leaves("small", true, true);
+        branch1.flowers("good", "red", 2, "monsoon");
+
+        branch2.fruits("round", "good");
+        branch2.leaves("medium", false, false);
+        branch2.flowers("bad", "blue", 4, "rainy");
+    }
+}
